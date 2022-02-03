@@ -1,0 +1,30 @@
+https://elementalab.com/comandos-de-git/
+SUBIR CAMBIOS HECHOS A UN DOCUMENTO:
+1)git add archivo.extension
+2)git commit -m "algo"
+3)git push origin nombreRama
+
+CAMBIAR NOMBRE A UN DOCUMENTO:
+https://help.github.com/es/github/managing-files-in-a-repository/renaming-a-file-using-the-command-line
+1)git mv old_filename new_filename
+2)git status para comprobar los nombres de archivo antiguo y nuevo.
+3)git commit -m "algo"
+4)git push origin nombreRama
+
+Fusionar rama a la master https://www.youtube.com/watch?v=-UQulO_0prM
+1)git checkout master #para moverme y pararme sobre la master
+2)git merge rama #para absorber desde la master a la rama
+3)git push origin master #para subir al repo remoto los cambios
+Tal vez haga falta hacer un pull si es que en el repo remoto hay ficheros que no tengo en el local
+Luego de hacer merge puede pedir que haga un comitt antes del pull
+
+
+
+Iniciar desde cero un repo local y subirlo al repo remoto https://www.freecodecamp.org/espanol/news/subir-a-github-lo-suficientemente-simple-para-poetas/
+1)Ejecuta git init en la terminal. Esto inicializará la carpeta/repositorio que tienes en tu computador local.
+2)Ejecuta git add . en la terminal. Esto hará un seguimiento de los cambios realizados en la carpeta de tu sistema desde el último commit. Como es esta la primera vez que haces commit a los contenidos de la carpeta, se añadirán todos.
+3)Ejecuta git commit -m "inserta Mensaje aquí". Esto preparará los cambios añadidos/rastreados en la carpeta de tu sistema para empujar a Github. Puedes reemplazar inserta el Mensaje aquí con cualquier mensaje de confirmación relevante de tu elección.
+4)Ejecuta git remote add origin https://github.com/nombreDeUsuario/repositorio.git en la terminal. Aquí, nombreDeUsuario y repositorio serán reemplazados por los valores proporcionados en el enlace copiado. Esto conectará la carpeta existente en tu sistema local al repositorio de Github recién creado. (El enlace 
+lo obtengo del sitio git, debo crear un repositorio allí, copiar la url y pegarla en este paso en la consola)
+5)Ejecuta git remote -v. Esto hace algo de magia usando git pull y git push para garantizar que el contenido de tu nuevo repositorio de Github y la carpeta en tu sistema local sean los mismos.
+6)Finalmente, ejecuta git push origin main para empujar tus archivos a Github. Ten en cuenta que la última palabra en el comando master, no es una entrada fija cuando se ejecuta git push, puede ser reemplazada por cualquier “nombre_de_rama” relevante.
